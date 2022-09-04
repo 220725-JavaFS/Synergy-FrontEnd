@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.revature</groupId>
-  <artifactId>ProjectOne_WebApp</artifactId>
+  <artifactId>ProjectTwo_FrontEnd</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
@@ -50,12 +50,6 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.13.3</version>
 		</dependency>
-		
-		<dependency>
-		<groupId>com.revature</groupId>
-		<artifactId>ProjectOne_ORM</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -66,7 +60,7 @@
 				<version>3.3.1</version>
 			</plugin>
 		</plugins>
-		<finalName>ProjectOne_WebApp</finalName>
+		<finalName>ProjectTwo_FrontEnd</finalName>
 	</build>
   
 </project>
