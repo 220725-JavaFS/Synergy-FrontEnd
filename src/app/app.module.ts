@@ -13,6 +13,7 @@ import { SelectorComponent } from './selector/selector.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     SelectorComponent,
     RegisterComponent,
     NavComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
