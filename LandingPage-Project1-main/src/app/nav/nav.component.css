@@ -1,0 +1,60 @@
+/* HEADER DESIGN */
+
+.navigation-wrap{
+    position:fixed;
+    width:100%;
+    left:0;
+    z-index:1000;
+    -webkit-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item{
+    padding:0 0.625rem;
+    transition:all 200ms linear;
+}
+
+.navigation-wrap .navbar-brand img{
+	height:10rem;
+}
+
+.nav-link{
+    font-size:0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.navigation-wrap .main-btn{
+    padding:0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left:0.625rem;
+} 
+
+.navbar-toggler:focus{
+    outline:unset;
+    border:unset;
+    box-shadow: none;
+}
+
+/* Change navbar styling on scroll */
+
+.navigation-wrap.scroll-on{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+    transition:all .15s ease-in-out 0s;
+}
+
+/* TOP BANNER DESIGN */
+
+.top-banner{
+    width:100%;
+    background: url('/assets/images/bg/bg-1.jpg') no-repeat center;
+    background-size:cover;
+    padding:16.875rem 0 9.375rem;
+}
