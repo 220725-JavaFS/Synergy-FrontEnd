@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SelectorComponent } from './selector/selector.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavComponent } from './nav/nav.component';
     FooterComponent,
     SelectorComponent,
     RegisterComponent,
-    NavComponent
+    NavComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
