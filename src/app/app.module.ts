@@ -14,6 +14,9 @@ import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './gallery/gallery.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,13 @@ import { HomeComponent } from './home/home.component';
     RegisterComponent,
     NavComponent,
     FavoriteComponent,
-    HomeComponent
+    HomeComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
