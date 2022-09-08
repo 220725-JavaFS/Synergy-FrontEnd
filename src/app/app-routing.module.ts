@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FavoriteComponent } from './favorite/favorite.component';
-import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { HomeComponent } from './components/home/home.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
