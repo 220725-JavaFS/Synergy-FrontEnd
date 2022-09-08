@@ -10,6 +10,7 @@ export class FavoriteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    scrollTo(0,780);
   }
 
 }
