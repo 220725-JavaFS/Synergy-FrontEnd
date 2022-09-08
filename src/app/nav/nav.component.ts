@@ -12,7 +12,8 @@ export class NavComponent implements OnInit {
     headingText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique, officia nobis cupiditate consectetur error natus in odit culpa.',
     buttonTextOne: 'Register',
     buttonTextTwo: 'Login',
-    buttonTextOneLink: '#newsletter'
+    buttonTextOneLink: '/register',
+    buttonTextTwoLink: '/login'
   }
 
   constructor() { }
