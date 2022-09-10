@@ -9,14 +9,11 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {
   }
 
 
-  onSubmit(form: NgForm) {
-    this.router.navigate(['search'], form.value.search)
-  }
   
 }

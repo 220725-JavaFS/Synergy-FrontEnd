@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'signin', component: SigninComponent},
   { path: 'main', component: MainComponent},
 ];
 
