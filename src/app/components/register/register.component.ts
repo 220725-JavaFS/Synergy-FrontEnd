@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   username:string='';
   userPassword:string='';
   users: Users[]=[];
-
+  
   constructor(private rs: RegisterService) { }
 
   ngOnInit(): void {

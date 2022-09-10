@@ -21,6 +21,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { ComponentsComponent } from './components/components.component';
+import { RegisterCompleteComponent } from './components/register-complete/register-complete.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ComponentsComponent } from './components/components.component';
     HomeComponent,
     GalleryComponent,
     LoginComponent,
-    ComponentsComponent
+    ComponentsComponent,
+    RegisterCompleteComponent
   ],
   imports: [
     BrowserModule,
