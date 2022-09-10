@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-gallery',
@@ -13,7 +13,7 @@ export class GalleryComponent implements OnInit {
   constructor(private _http: HttpService) { }
 
   ngOnInit() {
-    this._http.getBeer().subscribe(data => {
+    this._http.getBeer().subscribe((data) => {
       this.brews = data;
       console.log(this.brews);
     });

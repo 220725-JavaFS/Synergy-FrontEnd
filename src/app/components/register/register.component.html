@@ -13,7 +13,7 @@
                                 <div class="register-sign">First Name: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="First Name here" name="first" type="text">
+                                <input class="form-control" placeholder="First Name here" name="first" type="text" [(ngModel)]="userFN">
                             </div>
                         </div>
 
@@ -22,7 +22,7 @@
                                 <div class="register-sign">Last Name: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Last Name here" name="last" type="text">
+                                <input class="form-control" placeholder="Last Name here" name="last" type="text" [(ngModel)]="userLN">
                             </div>
                         </div>
 
@@ -31,7 +31,7 @@
                                 <div class="register-sign">Email: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Email here" name="email" type="email">
+                                <input class="form-control" placeholder="Email here" name="email" type="email" [(ngModel)]="userEmail">
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@
                                 <div class="register-sign">Username: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Username here" name="username" type="text">
+                                <input class="form-control" placeholder="Username here" name="username" type="text" [(ngModel)]="username">
                             </div>
                         </div>
 
@@ -49,7 +49,7 @@
                                 <div class="register-sign">Password: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Password here" name="password" type="text">
+                                <input class="form-control" placeholder="Password here" name="password" type="text" [(ngModel)]="userPassword">
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@
 
                         <div class="row mt-3">
                             <div class="col-lg-3 col-md-12 mt-lg-0 mt-5">
-                                <button class="sub-main-btn">SUBMIT</button>
+                                <button (click)= "sendUser()" class="sub-main-btn">SUBMIT</button>
                             </div>
                         </div>
 
