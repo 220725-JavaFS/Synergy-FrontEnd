@@ -9,6 +9,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'favorite', component: FavoriteComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'signin', component: SigninComponent},
-  { path: 'main', component: MainComponent}
+  { path: 'main', component: MainComponent},
 ];
 
 @NgModule({

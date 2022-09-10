@@ -1,15 +1,18 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation-wrap">
       <div class="search-container">
-        <button class="search-button">Search</button>
-          <form class="search-form">
-            <input 
-              class="search-input"
-              name="search"
-              ngModel
-              placeholder="Search 1000+ games"
-              />
-          </form>
+        
+        <form class="search-form" (ngSubmit)="onSubmit(form)" #form="ngForm">
+          <button class="search-button">Search</button>
+          <input 
+            class="search-input"
+            name="search"
+            placeholder="Search 1000+ games"
+            ngModel 
+            required
+            />
+              
+        </form>
           
 
           <div class="collapse navbar-collapse" id="navbarNav">
