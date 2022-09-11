@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommentService } from '../../services/comment.service';
 import { Comment } from '../../models/comment.model';
 import { ActivatedRoute } from '@angular/router';
+import { formatCurrency } from '@angular/common';
 
 @Component({
   selector: 'app-comments',
@@ -11,13 +12,14 @@ import { ActivatedRoute } from '@angular/router';
 export class CommentsComponent implements OnInit {
 
   comments:Comment[] = [];
-
+  newCommentVisibility = false;
   gameId: number = 0;
+  context: string = '';
 
   constructor(private commentService:CommentService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-      this.gameId = parseInt(this.route.snapshot.paramMap.get('gameId')!);
+      this.gameId = parseInt(this.route.snapshot.paramMap.get('game_id')!);
   }
 
   getComments() {
@@ -26,5 +28,20 @@ export class CommentsComponent implements OnInit {
         this.comments = response;
       }
     )
+  }
+
+  createComment(){
+    this.switchNewCommentVisibility();
+    let comment = new Comment(0, 0, this.gameId, this.context);
+    this.context = '';
+    this.commentService.createComment(comment).subscribe(
+      (response: Comment[]) => {
+        this.comments = response;
+      }
+    )
+  }
+
+  switchNewCommentVisibility():void {
+    this.newCommentVisibility = !this.newCommentVisibility;  
   }
 }

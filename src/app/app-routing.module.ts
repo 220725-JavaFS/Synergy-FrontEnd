@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'favorite', component: FavoriteComponent },
   { path: 'gallery', component: GalleryComponent },
-  { path: 'games/:id/comments', component: CommentsComponent },
+  { path: 'games/:game_id/comments', component: CommentsComponent },
   { path: 'games/:game_id', component: GameComponent },
 ];
 
