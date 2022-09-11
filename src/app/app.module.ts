@@ -17,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CommentsComponent } from './components/comments/comments.component';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     FavoriteComponent,
     HomeComponent,
-    GalleryComponent
+    GalleryComponent,
+    CommentsComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

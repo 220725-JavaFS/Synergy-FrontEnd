@@ -18,6 +18,13 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
       this.gameId = parseInt(this.route.snapshot.paramMap.get('gameId')!);
-      this.comments=this.commentService.getCommentsByGameId(this.gameId);
+  }
+
+  getComments() {
+    this.commentService.getCommentsByGameId(this.gameId).subscribe(
+      (response: Comment[]) => {
+        this.comments = response;
+      }
+    )
   }
 }

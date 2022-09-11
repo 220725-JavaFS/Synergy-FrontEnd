@@ -1,26 +1,29 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Comment } from '../models/comment.model';
+import { User } from '../models/user.model';
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
 
+constructor(private http:  HttpClient) { }
 
-  comment1 = new Comment(1, 1, 1, "1 1");
-  comment2 = new Comment(2, 1, 2, "1 2");
-  comment3 = new Comment(3, 2, 1, "2 1");
-  comment4 = new Comment(4, 2, 2, "2 2");
-  comment5 = new Comment(5, 3, 3, "3 3");
+getCommentsByGameId(gameId: number): Observable<Comment[]>{
 
-  comments:Comment[] = [this.comment1,this.comment2,this.comment3,this.comment4,this.comment5];
-constructor() { }
+  return this.http.get<Comment[]>('http://localhost:8081/data/comments/{gameId}');
 
-getComments():Comment[]{
-  return this.comments;
-} 
+  }
+  
+  createComment(comment:Comment): Observable<Comment>{
+    let body: Comment = comment;
+    return this.http.post<Comment>('http://localhost:8081/data/comments/{gameId}', body);
+  }
 
-getCommentsByGameId(gameId: number): Comment[] {
-    return this.comments.filter(comment => comment.gameId == gameId);
+  updateComment(comment:Comment): Observable<Comment>{
+    let body: Comment = comment;
+    return this.http.put<Comment>('http://localhost:8081/data/comments/{gameId}', body);
   }
 }
