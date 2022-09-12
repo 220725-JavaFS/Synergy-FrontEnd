@@ -1,0 +1,9 @@
+<div>
+    <div class = "float-left">
+     <h2> Your Rating: </h2>
+</div>
+<div>
+    <ngb-rating [max]="5" [(rate)]="rating.rating" [readonly]="false" (rateChange) = "ratingChange($event)"></ngb-rating>
+</div>
+</div>
+
