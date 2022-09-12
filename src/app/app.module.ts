@@ -24,6 +24,8 @@ import { RegisterCompleteComponent } from './components/register-complete/regist
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommentsComponent } from './components/comments/comments.component';
+import { RatingsComponent } from './components/ratings/ratings.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     ComponentsComponent,
     RegisterCompleteComponent,
+    CommentsComponent,
+    RatingsComponent,
     routingComponents  
   ],
   imports: [

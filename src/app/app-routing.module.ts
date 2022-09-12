@@ -9,6 +9,8 @@ import { SigninComponent } from './components/signin/signin.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 import { VideogameComponent } from './components/videogame/videogame.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { RatingsComponent } from './components/ratings/ratings.component';
 
 
 
@@ -20,7 +22,8 @@ const routes: Routes = [
   { path: 'register-complete', component: RegisterCompleteComponent},
   { path: 'main', component: MainComponent}, 
   { path: 'search/:game-search', component: VideogameComponent},
-
+  {path: 'games/:game_id/comments', component: CommentsComponent},
+  {path: 'games/:game_id/ratings', component: RatingsComponent}
 ];
 
 @NgModule({
