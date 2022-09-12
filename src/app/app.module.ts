@@ -6,9 +6,6 @@ import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 
-import { FeatureOneComponent } from './components/feature-one/feature-one.component';
-import { FeatureTwoComponent } from './components/feature-two/feature-two.component';
-import { FeatureThreeComponent } from './components/feature-three/feature-three.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SelectorComponent } from './components/selector/selector.component';
