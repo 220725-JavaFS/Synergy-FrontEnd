@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Users } from 'src/app/models/users';
 import { RegisterService } from 'src/app/services/register.service';
 
@@ -9,35 +10,26 @@ import { RegisterService } from 'src/app/services/register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  userFN:string ='';
-  userLN:string='';
-  userEmail:string= '';
-  username:string='';
-  userPassword:string='';
-  users: Users[]=[];
+  user = new Users();
+  errorFeedback='';
   
-  constructor(private rs: RegisterService) { }
+  constructor(private rs: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
     scrollTo(0,800);
-    this.getUsers();
   }
 
-  getUsers(){
-    this.rs.getAllUsers().subscribe(
-      (response: Users[]) => {
-        this.users = response;
+  registerUser(){
+    this.rs.newUser(this.user).subscribe(
+      data =>{ 
+        console.log("Success");
+        this.router.navigate(['/register-complete']);
+      },
+      error =>{ 
+        console.log("Error");
+        this.errorFeedback = "Error: Something went wrong";
       }
-    )
-  }
-
-  sendUser(){
-    let u = new Users(0, this.userFN, this.userLN, this.userEmail, this.username, this.userPassword)
-    this.rs.addUser(u).subscribe(
-      (response: Users[]) => {
-        this.users = response;
-      }
-    )
+    );
   }
 
 }

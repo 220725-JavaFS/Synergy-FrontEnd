@@ -10,13 +10,9 @@ export class RegisterService {
 
   constructor(private http:  HttpClient) { }
 
-  url= 'http://localhost:8081/data/users';
+  url= 'http://localhost:8081/gamerswiki/register';
 
-  addUser(u:Users):Observable<Users[]>{
-    return this.http.post(this.url,u) as Observable<Users[]>;
-  }
-
-  getAllUsers():Observable<Users[]> {
-    return this.http.get<Users[]>(this.url);
+  newUser(user:Users):Observable<any>{
+    return this.http.post<any>(this.url, user);
   }
 }
