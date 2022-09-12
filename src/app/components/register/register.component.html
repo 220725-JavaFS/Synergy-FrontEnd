@@ -15,7 +15,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="First Name here" name="first" type="text" [(ngModel)]="user.firstName" required #first="ngModel"
                                 [class.is-invalid]="first.invalid && first.touched">
-                                <small class="text-danger" [class.no-danger]="first.valid && first.untouched">First Name is required</small>
+                                <div *ngIf="first.invalid && first.touched">
+                                    <small class="text-danger">First Name is required</small>
+                                    </div>
                             </div>
                         </div>
 
@@ -26,7 +28,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Last Name here" name="last" type="text" [(ngModel)]="user.lastName" required #last="ngModel"
                                 [class.is-invalid]="last.invalid && last.touched">
-                                <small class="text-danger" [class.no-danger]="last.valid && last.untouched">Last Name is required</small>
+                                <div *ngIf="last.invalid && last.touched">
+                                    <small class="text-danger">Last Name is required</small>
+                                    </div>
 
                             </div>
                         </div>
@@ -38,8 +42,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Email here" name="email" type="email" [(ngModel)]="user.email" required #email="ngModel"
                                 [class.is-invalid]="email.invalid && email.touched">
-                                <small class="text-danger" [class.no-danger]="email.valid && email.untouched">Email is required</small>
-
+                                <div *ngIf="email.invalid && email.touched">
+                                    <small class="text-danger">Email is required</small>
+                                    </div>
                             </div>
                         </div>
 
@@ -50,7 +55,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Username here" name="username" type="text" [(ngModel)]="user.username" required #username="ngModel"
                                 [class.is-invalid]="username.invalid && username.touched">
-                                <small class="text-danger" [class.no-danger]="username.valid && username.untouched">Username is required</small>
+                                <div *ngIf="username.invalid && username.touched">
+                                    <small class="text-danger">Username is required</small>
+                                    </div>
 
                             </div>
                         </div>
@@ -62,8 +69,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Password here" name="password" type="text" [(ngModel)]="user.password" required #password="ngModel"
                                 [class.is-invalid]="password.invalid && password.touched">
-                                <small class="text-danger" [class.no-danger]="password.valid && password.untouched">Password is required</small>
-
+                                <div *ngIf="password.invalid && password.touched">
+                                    <small class="text-danger">Password is required</small>
+                                    </div>
                             </div>
                         </div>
 
@@ -75,8 +83,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Password here" name="confirm" type="text" #confirm="ngModel" (ngModel)="user.password" required
                                 [class.is-invalid]="confirm.invalid && confirm.touched">
+                                <div *ngIf="confirm.invalid && confirm.touched">
                                 <small class="text-danger" [class.no-danger]="(confirm.value == password.value) || confirm.untouched">The passwords didn't match</small>
-
+                                </div>
                             </div>
                         </div>
 
