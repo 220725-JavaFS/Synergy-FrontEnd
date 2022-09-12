@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommentService } from '../../services/comment.service';
 import { Comment } from '../../models/comment.model';
 import { ActivatedRoute } from '@angular/router';
-import { formatCurrency } from '@angular/common';
 
 @Component({
   selector: 'app-comments',
@@ -10,7 +9,6 @@ import { formatCurrency } from '@angular/common';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-
   comments:Comment[] = [];
   newCommentVisibility = false;
   gameId: number = 0;
@@ -20,6 +18,7 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
       this.gameId = parseInt(this.route.snapshot.paramMap.get('game_id')!);
+      this.getComments();
   }
 
   getComments() {

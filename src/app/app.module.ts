@@ -20,6 +20,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentsComponent } from './components/comments/comments.component';
 import { GameComponent } from './components/game/game.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RatingsComponent } from './components/ratings/ratings.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +39,15 @@ import { GameComponent } from './components/game/game.component';
     HomeComponent,
     GalleryComponent,
     CommentsComponent,
-    GameComponent
+    GameComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

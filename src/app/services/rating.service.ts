@@ -1,20 +1,21 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Rating } from '../models/rating.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RatingService {
-    rating1 = new Rating(1, 1, 1, 6);
-    rating2 = new Rating(2, 1, 2, 7);
-    rating3 = new Rating(3, 2, 1, 8);
-    rating4 = new Rating(4, 2, 2, 9);
-    rating5 = new Rating(5, 3, 3, 10);
-  
-    ratings:Rating[] = [this.rating1,this.rating2,this.rating3,this.rating4,this.rating5];
-  constructor() { }
+  url:string = 'http://localhost:8081/data/ratings';
+  constructor(private http:  HttpClient) { }
 
-  getRatings():Rating[]{
-    return this.ratings;
+  getRating(gameId: number, usersId: number):Observable<Rating>{
+    return this.http.get<Rating>(this.url+'/'+gameId+'/'+usersId);
+  }
+
+  createRating(rating:Rating): Observable<Rating>{
+    let body: Rating = rating;
+    return this.http.post<Rating>(this.url, body);
   }
 }

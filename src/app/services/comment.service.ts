@@ -14,7 +14,7 @@ constructor(private http:  HttpClient) { }
 
 getCommentsByGameId(gameId: number): Observable<Comment[]>{
 
-  return this.http.get<Comment[]>(this.url+'/{gameId}');
+  return this.http.get<Comment[]>(this.url+'/'+gameId);
 
   }
   
