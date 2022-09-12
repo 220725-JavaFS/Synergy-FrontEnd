@@ -27,7 +27,8 @@ export class RegisterComponent implements OnInit {
       },
       error =>{ 
         console.log("Error");
-        this.errorFeedback = "Error: Something went wrong";
+        scrollTo(0,900);
+        this.errorFeedback = "Error: Something went wrong. Please ensure all required fields have entries.";
       }
     );
   }

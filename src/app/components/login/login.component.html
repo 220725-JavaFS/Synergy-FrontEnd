@@ -18,7 +18,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Username here" name="username" type="text" [(ngModel)]="user.username" required #username="ngModel"
                                 [class.is-invalid]="username.invalid && username.touched">
-                                <small class="text-danger" [class.no-danger]="username.valid && username.untouched">Username is required</small>
+                                <div *ngIf="username.invalid && username.touched">
+                                <small class="text-danger">Username is required</small>
+                                </div>
                             </div>
                         </div>
 
@@ -29,7 +31,9 @@
                             <div class="col-md-8 col-12">
                                 <input class="form-control" placeholder="Password here" name="password" type="text" [(ngModel)]="user.password" required #password="ngModel"
                                 [class.is-invalid]="password.invalid && password.touched">
-                                <small class="text-danger" [class.no-danger]="password.valid && password.untouched">Password is required</small>
+                                <div *ngIf="password.invalid && password.touched">
+                                    <small class="text-danger">Password is required</small>
+                                    </div>
                             </div>
                         </div>
 
