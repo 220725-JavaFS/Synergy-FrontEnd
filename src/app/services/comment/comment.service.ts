@@ -8,7 +8,7 @@ import { Comment } from '../../models/comment.model';
 })
 export class CommentService {
 
-url:string = 'http://localhost:8081/data/comments';
+url:string = 'http://localhost:8081/gamerswiki/comments';
 
 constructor(private http:  HttpClient) { }
 

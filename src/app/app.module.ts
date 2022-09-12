@@ -22,6 +22,7 @@ import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommentsComponent } from './components/comments/comments.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
+import { GameComponent } from './components/game/game.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
     RegisterCompleteComponent,
     CommentsComponent,
     RatingsComponent,
+    GameComponent,
     routingComponents  
   ],
   imports: [

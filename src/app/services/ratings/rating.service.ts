@@ -7,7 +7,7 @@ import { Rating } from '../../models/rating.model';
   providedIn: 'root'
 })
 export class RatingService {
-  url:string = 'http://localhost:8081/data/ratings';
+  url:string = 'http://localhost:8081/gamerswiki/ratings';
   constructor(private http:  HttpClient) { }
 
   getRating(gameId: number, usersId: number):Observable<Rating>{
