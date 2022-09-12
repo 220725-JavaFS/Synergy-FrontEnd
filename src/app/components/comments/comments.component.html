@@ -1,0 +1,23 @@
+<br>
+
+<div [hidden]="newCommentVisibility">
+    <button (click)="switchNewCommentVisibility()" class="Create Comment">Create New Comment</button>
+</div>
+
+
+    <form >
+        <div [hidden]="!newCommentVisibility">
+            <label class="label col-sm-3">New Comment:</label>
+            <input type="text" name="newTrainName" [(ngModel)]="context" class="form-control" placeholder="Type Here" required>
+            <button (click)="createComment()" class="Submit Comment">Submit</button>
+        </div>
+    </form>
+
+    <div class="grid-container" >
+            <div class="comment-card" *ngFor = "let comment of comments">
+                <h2>{{comment.gameId}}</h2>
+                <p>{{comment.context}}</p>
+          
+        </div>   
+        
+    </div>
