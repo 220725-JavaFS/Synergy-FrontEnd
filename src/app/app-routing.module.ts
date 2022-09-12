@@ -4,7 +4,6 @@ import { FavoriteComponent } from './components/favorite/favorite.component';
 import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { GameComponent } from './components/game/game.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: 'favorite', component: FavoriteComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'games/:game_id/comments', component: CommentsComponent },
-  { path: 'games/:game_id', component: GameComponent },
   { path: 'games/:game_id/ratings', component: RatingsComponent },
 ];
 
