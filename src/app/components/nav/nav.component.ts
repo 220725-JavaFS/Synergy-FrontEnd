@@ -16,6 +16,7 @@ export class NavComponent implements OnInit {
     buttonTextTwoLink: '/login'
   }
 
+
   constructor() { }
 
   ngOnInit(): void {

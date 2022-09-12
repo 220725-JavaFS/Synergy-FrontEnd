@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Users } from 'src/app/models/users';
 import { RegisterService } from 'src/app/services/register.service';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -30,6 +31,7 @@ export class RegisterComponent implements OnInit {
         this.errorFeedback = "Error: Something went wrong";
       }
     );
+
   }
 
 }
