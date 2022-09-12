@@ -16,7 +16,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
 import { HomeComponent } from './components/home/home.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
@@ -37,7 +36,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     FavoriteComponent,
     HomeComponent,
-    GalleryComponent,
     LoginComponent,
     ComponentsComponent,
     RegisterCompleteComponent,

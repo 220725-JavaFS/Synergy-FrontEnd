@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   constructor(private rs: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
-    scrollTo(0,800);
+    scrollTo(0,0);
   }
 
   registerUser(){
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
       },
       error =>{ 
         console.log("Error");
-        scrollTo(0,900);
+        scrollTo(0,100);
         this.errorFeedback = "Error: Something went wrong. Please ensure all required fields have entries.";
       }
     );
