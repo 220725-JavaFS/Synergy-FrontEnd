@@ -1,0 +1,14 @@
+/*Book*/
+
+.book-section-two{
+    width:100%;
+    background:url('/src/assets/images/bg/bg-3.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:0 70px;
+    padding:4rem 0;
+}
+
+.book-section-two h2 {
+    color: var(--white-color);
+}

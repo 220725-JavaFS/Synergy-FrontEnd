@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Users } from 'src/app/models/users';
+import { RegisterService } from 'src/app/services/register.service';
+
 
 @Component({
   selector: 'app-register',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  user = new Users();
+  errorFeedback='';
+  
+  constructor(private rs: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
+    scrollTo(0,800);
+  }
+
+  registerUser(){
+    this.rs.newUser(this.user).subscribe(
+      data =>{ 
+        console.log("Success");
+        this.router.navigate(['/register-complete']);
+      },
+      error =>{ 
+        console.log("Error");
+        this.errorFeedback = "Error: Something went wrong";
+      }
+    );
+
   }
 
 }

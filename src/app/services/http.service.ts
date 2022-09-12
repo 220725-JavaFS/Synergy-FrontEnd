@@ -1,3 +1,4 @@
+
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -10,6 +11,11 @@ import { environment as env } from 'src/environments/environment';
 export class HttpService {
 
   constructor(private http: HttpClient) { }
+
+
+  getBeer() {
+    return this.http.get('https://api.openbrewerydb.org/breweries')
+  }
 
   // getGameList(
   //   ordering: string,
@@ -25,4 +31,5 @@ export class HttpService {
   //     params: params,
   //   });
   // }
+
 }

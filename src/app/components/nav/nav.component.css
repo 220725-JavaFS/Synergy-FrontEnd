@@ -50,3 +50,22 @@
     transition:all .15s ease-in-out 0s;
 }
 
+/* .navigation-wrap.scroll-on{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+    transition:all .15s ease-in-out 0s;
+} */
+
+/* TOP BANNER DESIGN */
+
+.top-banner{
+    width:100%;
+    background: url('/src/assets/images/bg/bg-1.jpg') no-repeat center;
+    background-size:cover;
+    padding:16.875rem 0 9.375rem;
+}
+
