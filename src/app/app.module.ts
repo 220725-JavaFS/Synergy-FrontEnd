@@ -7,17 +7,12 @@ import { AboutComponent } from './components/about/about.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SelectorComponent } from './components/selector/selector.component';
-// import { RegisterComponent } from './components/register/register.component';
-// import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
-// import { HomeComponent } from './components/home/home.component';
-// import { GalleryComponent } from './components/gallery/gallery.component';
-// import { SigninComponent } from './components/signin/signin.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,13 +21,8 @@ import { FormsModule } from "@angular/forms";
     FaqComponent,
     FooterComponent,
     SelectorComponent,
-    // RegisterComponent,
     NavComponent,
     FavoriteComponent,
-    // HomeComponent,
-    // GalleryComponent,
-    // LoginComponent,
-    // SigninComponent
     routingComponents  
   ],
   imports: [
@@ -40,7 +30,8 @@ import { FormsModule } from "@angular/forms";
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

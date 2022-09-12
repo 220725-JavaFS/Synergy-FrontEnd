@@ -1,1 +1,38 @@
 
+<div class="filters">
+  
+    <form>
+        <label class="word">Sort</label>
+        <select
+            class="selectbar"
+            panelClass="sort-select"
+            [(ngModel)]="sort"
+        >
+            <option value="name">Name</option>
+            <option value="-released">Released</option>
+            <option value="-added">Added</option>
+            <option value="-rating">Rating</option>
+            
+            
+        </select>
+    </form>
+</div>
+<app-search></app-search>
+<div class="games">
+    <div class="game">
+        <div class="game-thumb-container">
+            <img
+              class="game-thumbnail"
+              src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png"
+             
+            />
+        </div>
+        <div class="game-description">
+            <p class="game-name">Name</p>
+            <div class="game-category">
+               
+            </div>
+
+        </div>
+    </div>
+</div>

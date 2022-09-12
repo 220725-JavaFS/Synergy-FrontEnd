@@ -9,11 +9,21 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() {}
+  game: string = '';
+  
+  searchTerm: string = '';
+
+  //The router name could change
+  constructor(private router: Router) {}
 
   ngOnInit() {
   }
 
+  search(form: NgForm) {
+    this.router.navigate(['search', form.value.search]);
+    
+  }
+  
 
   
 }
