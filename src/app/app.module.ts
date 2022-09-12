@@ -19,7 +19,6 @@ import { HomeComponent } from './components/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
-import { ComponentsComponent } from './components/components.component';
 import { RegisterCompleteComponent } from './components/register-complete/register-complete.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from "@angular/forms";
@@ -39,7 +38,6 @@ import { RatingsComponent } from './components/ratings/ratings.component';
     FavoriteComponent,
     HomeComponent,
     LoginComponent,
-    ComponentsComponent,
     RegisterCompleteComponent,
     CommentsComponent,
     RatingsComponent,
