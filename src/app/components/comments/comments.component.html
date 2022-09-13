@@ -15,7 +15,7 @@
 
     <div class="grid-container" >
             <div class="comment-card" *ngFor = "let comment of comments">
-                <h2>{{comment.comment}}</h2>
+                <h2>{{comment.users.username}} Says: {{comment.comment}}</h2>
           
         </div>   
         

@@ -33,6 +33,7 @@ export class CommentsComponent implements OnInit {
     this.commentService.getCommentsByGameId(this.gameId).subscribe(
       (response: Comment[]) => {
         this.comments = response;
+        console.log(this.comments);
       }
     )
   }
@@ -44,6 +45,7 @@ export class CommentsComponent implements OnInit {
     this.commentService.createComment(comment).subscribe(
       (response: Comment[]) => {
         this.comments = response;
+        
       }
     )
   }
