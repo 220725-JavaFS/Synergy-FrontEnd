@@ -25,8 +25,8 @@ getCommentsByGameId(gameId: number): Observable<Comment[]>{
     return this.http.post<Comment[]>(this.url, body);
   }
 
-  updateComment(comment:Comment): Observable<Comment>{
+  updateComment(comment:Comment): Observable<any>{
     let body: Comment = comment;
-    return this.http.put<Comment>(this.url, body);
+    return this.http.put<any>(this.url, body);
   }
 }

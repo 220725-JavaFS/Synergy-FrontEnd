@@ -10,12 +10,12 @@ export class RatingService {
   url:string = 'http://localhost:8081/gamerswiki/ratings';
   constructor(private http:  HttpClient) { }
 
-  getRating(gameId: number, usersId: number):Observable<Rating>{
-    return this.http.get<Rating>(this.url+'/'+gameId+'/'+usersId);
+  getRating(gameId: number, usersId: number):Observable<any>{
+    return this.http.get<any>(this.url+'/'+gameId+'/'+usersId);
   }
 
-  createRating(rating:Rating): Observable<Rating>{
+  createRating(rating:Rating): Observable<any>{
     let body: Rating = rating;
-    return this.http.post<Rating>(this.url, body);
+    return this.http.post<any>(this.url, body);
   }
 }
