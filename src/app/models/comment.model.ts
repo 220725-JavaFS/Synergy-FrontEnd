@@ -1,4 +1,6 @@
+import { Users } from "./users";
+
 export class Comment {
-    constructor(public id:number, public userId:number, public gameId:number, 
-        public context:String){}
+    constructor(public id:number, public user:Users, public gameId:number, 
+        public comment:String){}
 }

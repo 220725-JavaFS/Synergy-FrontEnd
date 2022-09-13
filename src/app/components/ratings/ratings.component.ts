@@ -21,7 +21,9 @@ export class RatingsComponent implements OnInit {
   getUserRating() {
     this.ratingService.getRating(this.gameId, 0).subscribe(
       (response: Rating) => {
-        this.rating = response;
+        if(response){
+          this.rating = response;
+        }
       }
     )
   }

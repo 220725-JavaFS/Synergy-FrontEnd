@@ -24,8 +24,6 @@ const routes: Routes = [
   { path: 'main', component: MainComponent}, 
   { path: 'search/:game-search', component: VideogameComponent},
   {path: 'games/:game_id', component: GameComponent},
-  {path: 'games/:game_id/comments', component: CommentsComponent},
-  {path: 'games/:game_id/ratings', component: RatingsComponent}
 ];
 
 @NgModule({
