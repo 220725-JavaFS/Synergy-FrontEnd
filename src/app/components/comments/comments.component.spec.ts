@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { defer } from 'rxjs';
-import { CommentService } from 'src/app/services/comment.service';
-
+import { defer } from 'rxjs'
+import { CommentService } from 'src/app/services/comment/comment.service';
 import { CommentsComponent } from './comments.component';
 import { Comment } from '../../models/comment.model';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
