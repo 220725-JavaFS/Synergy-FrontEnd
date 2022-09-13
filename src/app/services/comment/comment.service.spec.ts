@@ -4,6 +4,7 @@ import { CommentService } from './comment.service';
 
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Comment } from 'src/app/models/comment.model';
+import { Users } from 'src/app/models/users';
 
 
 describe('CommentService', () => {
@@ -25,7 +26,7 @@ describe('CommentService', () => {
 
   it('#getCommentsByGameId should return expected data', (done) => {
     const expectedData: Comment[] =[
-      { 'id': 0 , 'userId': 0 , 'gameId': 0, 'context': ''}
+      { 'id': 0 , 'users': new Users() , 'gameId': 0, 'comment': ''}
     ];
     
     service.getCommentsByGameId(0).subscribe(data => {
@@ -40,10 +41,10 @@ describe('CommentService', () => {
 
   it('#createComment should return expected data', (done) => {
     const expectedData: Comment[] =[
-      { 'id': 0 , 'userId': 0 , 'gameId': 0, 'context': ''}
+      { 'id': 0 , 'users': new Users() , 'gameId': 0, 'comment': ''}
     ];
     
-    service.createComment(new Comment(0,0,0,'')).subscribe(data => {
+    service.createComment(new Comment(0,new Users(), 0, '')).subscribe(data => {
       expect(data).toEqual(expectedData);
       done();
     });
@@ -54,9 +55,9 @@ describe('CommentService', () => {
   });
 
   it('#updateComment should return expected data', (done) => {
-    const expectedData: any = new Comment(0,0,0,'');
+    const expectedData: any = new Comment(0,new Users(), 0, '');
     
-    service.updateComment(new Comment(0,0,0,'')).subscribe(data => {
+    service.updateComment(new Comment(0,new Users(), 0, '')).subscribe(data => {
       expect(data).toEqual(expectedData);
       done();
     });

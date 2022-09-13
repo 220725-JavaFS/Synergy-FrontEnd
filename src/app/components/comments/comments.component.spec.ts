@@ -4,7 +4,8 @@ import { CommentService } from 'src/app/services/comment/comment.service';
 import { CommentsComponent } from './comments.component';
 import { Comment } from '../../models/comment.model';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CommentService } from 'src/app/services/comment/comment.service';
+import { Users } from 'src/app/models/users';
+
 describe('CommentsComponent', () => {
   let component: CommentsComponent;
   let fixture: ComponentFixture<CommentsComponent>;
@@ -27,7 +28,7 @@ describe('CommentsComponent', () => {
     ['createComment','getCommentsByGameId' ]);
 
     serviceSpy.getCommentsByGameId.and.returnValue(asyncData([new
-      Comment(1, 1, 1, 'test'), new Comment(2, 1, 1, 'test2')]));
+      Comment(1, new Users(), 1, 'test'), new Comment(2, new Users(), 1, 'test2')]));
 
     await TestBed.configureTestingModule({
       declarations: [ CommentsComponent ],

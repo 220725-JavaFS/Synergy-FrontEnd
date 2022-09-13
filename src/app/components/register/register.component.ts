@@ -19,6 +19,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     scrollTo(0,100);
   }
+  changetype:boolean =true;
+
+  viewpass(){
+    this.changetype = !this.changetype;
+  }
 
   registerUser(){
     this.rs.newUser(this.user).subscribe(

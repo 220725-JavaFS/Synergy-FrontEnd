@@ -19,6 +19,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     scrollTo(0,0);
   }
+  changetype:boolean =true;
+
+  viewpass(){
+    this.changetype = !this.changetype;
+  }
 
   loginUser(){
     this.ls.returningUser(this.user).subscribe(

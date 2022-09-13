@@ -4,6 +4,7 @@ import { RatingService } from './rating.service';
 
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Rating } from 'src/app/models/rating.model';
+import { Users } from 'src/app/models/users';
 
 describe('RatingService', () => {
   let service: RatingService;
@@ -23,7 +24,7 @@ describe('RatingService', () => {
   });
 
   it('#getRating should return expected data', (done) => {
-    const expectedData: any = new Rating(0,0,0,0);
+    const expectedData: any = new Rating(0,new Users(), 0, 0);
     
     service.getRating(0,0).subscribe(data => {
       expect(data).toEqual(expectedData);
@@ -35,9 +36,9 @@ describe('RatingService', () => {
     testRequest.flush(expectedData);
   });
   it('#createRating should return expected data', (done) => {
-    const expectedData: any = new Rating(0,0,0,0);
+    const expectedData: any = new Rating(0,new Users(), 0, 0);
     
-    service.createRating(new Rating(0,0,0,0)).subscribe(data => {
+    service.createRating(new Rating(0,new Users(), 0, 0)).subscribe(data => {
       expect(data).toEqual(expectedData);
       done();
     });
