@@ -45,3 +45,10 @@
     border-radius: 0;
     text-align: right;
 }
+.eyeicon {
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    cursor: pointer;
+    width: 100%;
+}

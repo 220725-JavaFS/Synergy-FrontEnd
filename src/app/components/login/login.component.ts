@@ -18,6 +18,12 @@ export class LoginComponent implements OnInit {
     scrollTo(0,675);
   }
 
+  changetype:boolean =true;
+
+  viewpass(){
+    this.changetype = !this.changetype;
+  }
+
   loginUser(){
     this.ls.returningUser(this.user).subscribe(
       data =>{ 

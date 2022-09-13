@@ -65,7 +65,7 @@
                                 <div class="register-sign">Password: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Password here" name="password" type="text" [(ngModel)]="user.password" required #password="ngModel"
+                                <input class="form-control" placeholder="Password here" name="password" [type]="changetype?'password':'text'" [(ngModel)]="user.password" required #password="ngModel"
                                 [class.is-invalid]="password.invalid && password.touched">
                                 <div *ngIf="password.invalid && password.touched">
                                     <small class="text-danger">Password is required</small>
@@ -78,7 +78,7 @@
                                 <div class="register-sign">Confirm Password: </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <input class="form-control" placeholder="Password here" name="confirm" type="text" #confirm="ngModel" (ngModel)="user.password" required
+                                <input class="form-control" placeholder="Password here" name="confirm" [type]="changetype?'password':'text'" #confirm="ngModel" (ngModel)="user.password" required
                                 [class.is-invalid]="confirm.invalid && confirm.touched">
                                 <div *ngIf="confirm.invalid && confirm.touched">
                                 <small class="text-danger" [class.no-danger]="(confirm.value == password.value) || confirm.untouched">The passwords didn't match</small>
