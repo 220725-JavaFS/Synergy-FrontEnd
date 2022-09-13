@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommentService } from '../../services/comment/comment.service';
 import { Comment } from '../../models/comment.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
+import { Users } from 'src/app/models/users';
+import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
   selector: 'app-comments',
@@ -13,12 +15,18 @@ export class CommentsComponent implements OnInit {
   newCommentVisibility = false;
   gameId: number = 0;
   context: string = '';
+  user: Users = new Users();
 
-  constructor(private commentService:CommentService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private commentService:CommentService, private route: ActivatedRoute, public session: SessionService) { }
 
   ngOnInit(): void {
       this.gameId = parseInt(this.route.snapshot.paramMap.get('game_id')!);
       this.getComments();
+      this.session.getActiveUser().subscribe(
+        (response: Users) => {
+          console.log(response)
+          this.user = response;
+        });
   }
 
   getComments() {
@@ -31,7 +39,7 @@ export class CommentsComponent implements OnInit {
 
   createComment(){
     this.switchNewCommentVisibility();
-    let comment = new Comment(0, 0, this.gameId, this.context);
+    let comment = new Comment(0, this.user, this.gameId, this.context);
     this.context = '';
     this.commentService.createComment(comment).subscribe(
       (response: Comment[]) => {
@@ -41,6 +49,22 @@ export class CommentsComponent implements OnInit {
   }
 
   switchNewCommentVisibility():void {
-    this.newCommentVisibility = !this.newCommentVisibility;  
+    if(this.canActivate()){
+      this.newCommentVisibility = !this.newCommentVisibility;  
+    }
+    
+
   }
+
+  canActivate() {
+      
+    if (this.user) {
+        // logged in so return true
+        return true;
+    }
+
+    // not logged in so redirect to login page with the return url
+    this.router.navigate(['/login']);
+    return false;
+}
 }

@@ -19,7 +19,9 @@ getCommentsByGameId(gameId: number): Observable<Comment[]>{
   }
   
   createComment(comment:Comment): Observable<Comment[]>{
+    console.log(comment);
     let body: Comment = comment;
+    console.log(body);
     return this.http.post<Comment[]>(this.url, body);
   }
 
