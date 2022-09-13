@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Users } from 'src/app/models/users';
 
@@ -7,15 +7,15 @@ import { Users } from 'src/app/models/users';
 })
 export class SessionService {
 
-  constructor(private http:  HttpClient) {}
+  constructor(private http:  HttpClient) {  }
   url:string = 'http://localhost:8081/gamerswiki/ses';
 
   getActiveUser(){
-    return this.http.get<Users>(this.url);
+    return this.http.get<any>(this.url);
   }
 
   setActiveUser(user:Users){
     let body = user;
-    return this.http.post<Users>(this.url, body);
+    return this.http.post<any>(this.url, body);
   }
 }

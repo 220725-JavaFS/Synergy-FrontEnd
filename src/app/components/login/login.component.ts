@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         this.user = data;
         console.log("Success");
         this.location.back();
-        this.session.setActiveUser(this.user);
+        this.ls.setActive(this.user);
       },
       error =>{ 
         console.log("Error");
