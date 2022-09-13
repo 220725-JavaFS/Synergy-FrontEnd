@@ -29,7 +29,6 @@ export class GameComponent implements OnInit {
     )
     this.gameService.getGameCover(this.gameId).subscribe(
       (response: Cover) => {
-          console.log(response);
           this.cover = response;
       }
     )

@@ -15,4 +15,8 @@ export class RegisterService {
   newUser(user:Users):Observable<any>{
     return this.http.post<any>(this.url, user);
   }
+
+  setActive(user:Users):Observable<any>{
+    return this.http.post<any>(this.url+"/ses", user);
+  }
 }

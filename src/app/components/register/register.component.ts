@@ -23,8 +23,10 @@ export class RegisterComponent implements OnInit {
   registerUser(){
     this.rs.newUser(this.user).subscribe(
       data =>{ 
+        this.user = data;
         console.log("Success");
-        this.router.navigate(['/register-complete']);
+        this.rs.setActive(this.user);
+        this.router.navigate(['/']);
       },
       error =>{ 
         console.log("Error");

@@ -33,5 +33,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [HomeComponent, 
                                   LoginComponent, RegisterComponent,
-                                  SigninComponent, MainComponent,
+                                  SigninComponent, MainComponent,RatingsComponent,
                                   SearchComponent, VideogameComponent];

@@ -1,4 +1,7 @@
+<app-nav></app-nav>
 
+
+<div class="top-banner">
 <header>
     <nav class="navbar navbar-expand-lg navigation-wrap">
         <div class="search-container">
@@ -16,41 +19,13 @@
               />
                  
           </form>
-            
-  
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-    
-                    <li class="nav-item">
-                        <a href="#" routerLink="/favorite"><button class="main-btn">View Your Favorite</button></a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
   </header>
 
-<div class="filters">
-  
-    <form>
-        <label class="word">Sort</label>
-        <select
-            class="selectbar"
-            panelClass="sort-select"
-        >
-            <option value="name">Name</option>
-            <option value="-released">Released</option>
-            <option value="-added">Added</option>
-            <option value="-rating">Rating</option>
-            
-            
-        </select>
-    </form>
-</div>
 <app-search></app-search>
 <div class="games" *ngFor = "let game of games">
+    <a href="/games/{{game.id}}">
     <div class="game">
         <div class="game-thumb-container">
             <img
@@ -68,4 +43,6 @@
 
         </div>
     </div>
+    </a>
+</div>
 </div>

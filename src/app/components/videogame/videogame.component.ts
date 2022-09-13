@@ -18,15 +18,16 @@ export class VideogameComponent implements OnInit {
   gameId: number = 0;
   games: Game[] =  [];
   cover: Cover = new Cover(0, '');
-  private routeSub: Subscription;
 
   searchTerm: string = '';
   
   constructor(private router: Router,
     private gameService:GameService,
-    private route: ActivatedRoute) {this.routeSub = Subscription.EMPTY; }
+    private route: ActivatedRoute){}
 
   ngOnInit(): void {
+    this.searchTerm = '';
+    this.name = "";
   }
 
   onSubmit(form: NgForm) {
