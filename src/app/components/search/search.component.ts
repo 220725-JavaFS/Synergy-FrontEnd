@@ -18,11 +18,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onSubmit(form: NgForm) {
-    this.router.navigate(['search', form.value.search]);
-    
-  }
   
 
   

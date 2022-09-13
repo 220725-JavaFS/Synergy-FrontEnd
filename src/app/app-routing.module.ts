@@ -21,8 +21,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'register-complete', component: RegisterCompleteComponent},
-  { path: 'main', component: MainComponent}, 
-  { path: 'search/:game-search', component: VideogameComponent},
+  { path: 'search', component: MainComponent}, 
   {path: 'games/:game_id', component: GameComponent},
 ];
 

@@ -24,9 +24,9 @@ getGameCover(gameId:number): Observable<Cover>{
 
 }
 
-getGameByName(name:string): Observable<Game> {
-  let body: String = "search " + name + "; fields id, genres.name, name, storyline; where version_parent=null; limit 1;";
-  return this.http.post<Game>(this.url, body);
+getGameByName(name:string): Observable<Game[]> {
+  let body: String = 'search "' + name + '"; fields *; limit 500;';
+  return this.http.post<Game[]>(this.url, body);
 }
 
 }

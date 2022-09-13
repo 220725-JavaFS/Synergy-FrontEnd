@@ -1,4 +1,37 @@
 
+<header>
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+        <div class="search-container">
+          
+          <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            
+            <button class="search-button" >Search</button>
+            <input
+              class="search-input"
+              type="search"
+              id="search-term"
+              name="search"
+              ngModel 
+              placeholder="Search 1000+ games"
+              />
+                 
+          </form>
+            
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+    
+                    <li class="nav-item">
+                        <a href="#" routerLink="/favorite"><button class="main-btn">View Your Favorite</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </header>
+
 <div class="filters">
   
     <form>
@@ -6,7 +39,6 @@
         <select
             class="selectbar"
             panelClass="sort-select"
-            [(ngModel)]="sort"
         >
             <option value="name">Name</option>
             <option value="-released">Released</option>
@@ -18,16 +50,17 @@
     </form>
 </div>
 <app-search></app-search>
-<div class="games">
+<div class="games" *ngFor = "let game of games">
     <div class="game">
         <div class="game-thumb-container">
             <img
               class="game-thumbnail"
               src={{cover.url}}
+              alt = {{game.name}}
              
             />
         </div>
-        <div class="game-description">
+        <div class="game-description" >
             <p class="game-name">{{game.name}}</p>
             <div class="game-category">
                 <h4>{{game.summary}}</h4>
