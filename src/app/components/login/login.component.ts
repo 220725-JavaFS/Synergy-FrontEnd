@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private ls: LoginService, private router: Router) { }
 
   ngOnInit(): void {
-    scrollTo(0,675);
+    scrollTo(0,0);
   }
 
   loginUser(){

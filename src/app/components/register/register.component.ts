@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   constructor(private rs: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
-    scrollTo(0,0);
+    scrollTo(0,100);
   }
 
   registerUser(){
